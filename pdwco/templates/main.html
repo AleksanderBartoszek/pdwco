@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Aleksander Bartoszek</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Style the side navigation */
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+  }
+
+
+  /* Side navigation links */
+  .sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color on hover */
+  .sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Style the content */
+  .content {
+    margin-left: 200px;
+    padding-left: 20px;
+  }
+  </style>
+  </head>
+  <body>
+
+  <div class="sidenav">
+    <a href="/customers">Customers</a>
+    <a href="/tickets">Tickets</a>
+    <a href="/concerts">Concerts in Tickets</a>
+    <a href="/wishlists">Tickets in Wishlists</a>
+    <a href="/available">Tickets availabile for shipping</a>
+    <a href="/expensive">Tickets with price above 300</a>
+    <a href="/martin">Tickets bought by George Martin</a>
+    <br><br><br><br><br><br>
+    <a href="/ticketC">Create new Ticket</a>
+    <a href="/ticketR">Read Ticket by title</a>
+    <a href="/ticketU">Update Ticket by title</a>
+    <a href="/ticketD">Delete Ticket by title</a>
+  </div>
+
+  <div class="content">
+    {% block body %}{% endblock %}
+  </div>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block body %}
+
+<h4>{{ info }}</h4>
+<div>
+  <table>
+  <tr>
+    <th>Customer</th>
+    <th>Ticket</th>
+  </tr>
+  {% for record in records %}
+    <tr>
+      <td>{{ record.get('name') }}</td>
+      <td>{{ record.get('title') }}</td>
+    </tr>
+  {% endfor %}
+</table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% block body %}
+
+<h4>{{ info }}</h4>
+<div>
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Age</th>
+  </tr>
+  {% for record in records %}
+    <tr>
+      <td>{{ record.get('name') }}</td>
+      <td>{{ record.get('email') }}</td>
+      <td>{{ record.get('age') }}</td>
+    </tr>
+  {% endfor %}
+</table>
+</div>
+
+{% endblock %}
